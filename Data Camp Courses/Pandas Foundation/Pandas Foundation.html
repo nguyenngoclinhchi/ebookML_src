@@ -13116,7 +13116,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="CHAPTER-1:-Data-ingestion-&amp;-inspection">CHAPTER 1: Data ingestion &amp; inspection<a class="anchor-link" href="#CHAPTER-1:-Data-ingestion-&amp;-inspection">&#182;</a></h1><h2 id="NumPy-and-pandas-working-together">NumPy and pandas working together<a class="anchor-link" href="#NumPy-and-pandas-working-together">&#182;</a></h2><p>Pandas depends upon and interoperates with NumPy, the Python library for fast numeric array computations. For example, you can use the DataFrame attribute .values to represent a DataFrame <code>df</code> as a NumPy array. You can also pass pandas data structures to NumPy methods. In this exercise, we have imported pandas as pd and loaded world population data every 10 years since 1960 into the DataFrame df. This dataset was derived from the one used in the previous exercise.</p>
+<h1 id="Pandas-Foundation">Pandas Foundation<a class="anchor-link" href="#Pandas-Foundation">&#182;</a></h1><h2 id="CHAPTER-1:-Data-ingestion-&amp;-inspection">CHAPTER 1: Data ingestion &amp; inspection<a class="anchor-link" href="#CHAPTER-1:-Data-ingestion-&amp;-inspection">&#182;</a></h2><h3 id="NumPy-and-pandas-working-together">NumPy and pandas working together<a class="anchor-link" href="#NumPy-and-pandas-working-together">&#182;</a></h3><p>Pandas depends upon and interoperates with NumPy, the Python library for fast numeric array computations. For example, you can use the DataFrame attribute .values to represent a DataFrame <code>df</code> as a NumPy array. You can also pass pandas data structures to NumPy methods. In this exercise, we have imported pandas as pd and loaded world population data every 10 years since 1960 into the DataFrame df. This dataset was derived from the one used in the previous exercise.</p>
 <p>Your job is to extract the values and store them in an array using the attribute .values. You'll then use those values as input into the NumPy <code>np.log10()</code> method to compute the base 10 logarithm of the population values. Finally, you will pass the entire pandas DataFrame into the same NumPy <code>np.log10()</code> method and compare the results.</p>
 
 </div>
@@ -13152,7 +13152,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Zip-lists-to-build-a-DataFrame">Zip lists to build a DataFrame<a class="anchor-link" href="#Zip-lists-to-build-a-DataFrame">&#182;</a></h2><p>In this exercise, you're going to make a pandas DataFrame of the top three countries to win gold medals since 1896 by first building a dictionary. list_keys contains the column names 'Country' and 'Total'. list_values contains the full names of each country and the number of gold medals awarded. The values have been taken from Wikipedia.</p>
+<h3 id="Zip-lists-to-build-a-DataFrame">Zip lists to build a DataFrame<a class="anchor-link" href="#Zip-lists-to-build-a-DataFrame">&#182;</a></h3><p>In this exercise, you're going to make a pandas DataFrame of the top three countries to win gold medals since 1896 by first building a dictionary. list_keys contains the column names 'Country' and 'Total'. list_values contains the full names of each country and the number of gold medals awarded. The values have been taken from Wikipedia.</p>
 <p>Your job is to use these lists to construct a list of tuples, use the list of tuples to construct a dictionary, and then use that dictionary to construct a DataFrame. In doing so, you'll make use of the <code>list(), zip(), dict() and pd.DataFrame()</code> functions. Pandas has already been imported as pd.</p>
 <p>Note: The <code>zip()</code> function in Python 3 and above returns a special zip object, which is essentially a generator. To convert this zip object into a list, you'll need to use <code>list()</code>. You can learn more about the <code>zip()</code> function as well as generators in Python Data Science Toolbox (Part 2).</p>
 
@@ -13186,7 +13186,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Labeling-your-data">Labeling your data<a class="anchor-link" href="#Labeling-your-data">&#182;</a></h2><p>You can use the DataFrame attribute df.columns to view and assign new string labels to columns in a pandas DataFrame.</p>
+<h3 id="Labeling-your-data">Labeling your data<a class="anchor-link" href="#Labeling-your-data">&#182;</a></h3><p>You can use the DataFrame attribute df.columns to view and assign new string labels to columns in a pandas DataFrame.</p>
 <p>In this exercise, we have imported pandas as pd and defined a DataFrame df containing top Billboard hits from the 1980s (from Wikipedia). Each row has the year, artist, song name and the number of weeks at the top. However, this DataFrame has the column labels a, b, c, d. Your job is to use the <code>df.columns</code> attribute to re-assign descriptive column labels</p>
 
 </div>
@@ -13212,7 +13212,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Building-DataFrames-with-broadcasting">Building DataFrames with broadcasting<a class="anchor-link" href="#Building-DataFrames-with-broadcasting">&#182;</a></h2><p>You can implicitly use 'broadcasting', a feature of NumPy, when creating pandas DataFrames. In this exercise, you're going to create a DataFrame of cities in Pennsylvania that contains the city name in one column and the state name in the second. We have imported the names of 15 cities as the list <code>cities</code>.</p>
+<h3 id="Building-DataFrames-with-broadcasting">Building DataFrames with broadcasting<a class="anchor-link" href="#Building-DataFrames-with-broadcasting">&#182;</a></h3><p>You can implicitly use 'broadcasting', a feature of NumPy, when creating pandas DataFrames. In this exercise, you're going to create a DataFrame of cities in Pennsylvania that contains the city name in one column and the state name in the second. We have imported the names of 15 cities as the list <code>cities</code>.</p>
 <p>Your job is to construct a DataFrame from the list of cities and the string <code>'PA'</code>.</p>
 
 </div>
@@ -13244,7 +13244,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Reading-a-flat-file">Reading a flat file<a class="anchor-link" href="#Reading-a-flat-file">&#182;</a></h2><p>In previous exercises, we have preloaded the data for you using the pandas function <code>read_csv()</code>. Now, it's your turn! Your job is to read the World Bank population data you saw earlier into a DataFrame using <code>read_csv()</code>. The file is available in the variable data_file.</p>
+<h3 id="Reading-a-flat-file">Reading a flat file<a class="anchor-link" href="#Reading-a-flat-file">&#182;</a></h3><p>In previous exercises, we have preloaded the data for you using the pandas function <code>read_csv()</code>. Now, it's your turn! Your job is to read the World Bank population data you saw earlier into a DataFrame using <code>read_csv()</code>. The file is available in the variable data_file.</p>
 <p>The next step is to reread the same file, but simultaneously rename the columns using the names keyword input parameter, set equal to a list of new column labels. You will also need to set <code>header=0</code> to rename the column labels.</p>
 <p>Finish up by inspecting the result with <code>df.head() and df.info()</code> in the IPython Shell (changing df to the name of your DataFrame variable).</p>
 <p>pandas has already been imported and is available in the workspace as pd.</p>
@@ -13279,7 +13279,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Delimiters,-headers,-and-extensions">Delimiters, headers, and extensions<a class="anchor-link" href="#Delimiters,-headers,-and-extensions">&#182;</a></h2><p>Not all data files are clean and tidy. Pandas provides methods for reading those not-so-perfect data files that you encounter far too often.</p>
+<h3 id="Delimiters,-headers,-and-extensions">Delimiters, headers, and extensions<a class="anchor-link" href="#Delimiters,-headers,-and-extensions">&#182;</a></h3><p>Not all data files are clean and tidy. Pandas provides methods for reading those not-so-perfect data files that you encounter far too often.</p>
 <p>In this exercise, you have monthly stock data for four companies downloaded from Yahoo Finance. The data is stored as one row for each company and each column is the end-of-month closing price. The file name is given to you in the variable <code>file_messy</code>.</p>
 <p>In addition, this file has three aspects that may cause trouble for lesser tools: multiple header lines, comment records (rows) interleaved throughout the data rows, and space delimiters instead of commas.</p>
 <p>Your job is to use pandas to read the data from this problematic file_messy using non-default input options with <code>read_csv()</code> so as to tidy up the mess at read time. Then, write the cleaned up data to a CSV file with the variable file_clean that has been prepared for you, as you might do in a real data workflow.</p>
@@ -13320,7 +13320,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Plotting-series-using-pandas">Plotting series using pandas<a class="anchor-link" href="#Plotting-series-using-pandas">&#182;</a></h1><p>Data visualization is often a very effective first step in gaining a rough understanding of a data set to be analyzed. Pandas provides data visualization by both depending upon and interoperating with the matplotlib library. You will now explore some of the basic plotting mechanics with pandas as well as related matplotlib options. We have pre-loaded a pandas DataFrame df which contains the data you need. Your job is to use the DataFrame method <code>df.plot()</code> to visualize the data, and then explore the optional matplotlib input parameters that this <code>.plot()</code> method accepts.</p>
+<h3 id="Plotting-series-using-pandas">Plotting series using pandas<a class="anchor-link" href="#Plotting-series-using-pandas">&#182;</a></h3><p>Data visualization is often a very effective first step in gaining a rough understanding of a data set to be analyzed. Pandas provides data visualization by both depending upon and interoperating with the matplotlib library. You will now explore some of the basic plotting mechanics with pandas as well as related matplotlib options. We have pre-loaded a pandas DataFrame df which contains the data you need. Your job is to use the DataFrame method <code>df.plot()</code> to visualize the data, and then explore the optional matplotlib input parameters that this <code>.plot()</code> method accepts.</p>
 <p>The pandas <code>.plot()</code> method makes calls to matplotlib to construct the plots. This means that you can use the skills you've learned in previous visualization courses to customize the plot. In this exercise, you'll add a custom title and axis labels to the figure.</p>
 <p>Before plotting, inspect the DataFrame in the IPython Shell using <code>df.head()</code>. Also, use <code>type(df)</code> and note that it is a single column DataFrame.</p>
 
@@ -13359,7 +13359,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Plotting-DataFrames">Plotting DataFrames<a class="anchor-link" href="#Plotting-DataFrames">&#182;</a></h2><p>Comparing data from several columns can be very illuminating. Pandas makes doing so easy with multi-column DataFrames. By default, calling <code>df.plot()</code> will cause pandas to over-plot all column data, with each column as a single line. In this exercise, we have pre-loaded three columns of data from a weather data set - temperature, dew point, and pressure - but the problem is that pressure has different units of measure. The pressure data, measured in Atmospheres, has a different vertical scaling than that of the other two data columns, which are both measured in degrees Fahrenheit.</p>
+<h3 id="Plotting-DataFrames">Plotting DataFrames<a class="anchor-link" href="#Plotting-DataFrames">&#182;</a></h3><p>Comparing data from several columns can be very illuminating. Pandas makes doing so easy with multi-column DataFrames. By default, calling <code>df.plot()</code> will cause pandas to over-plot all column data, with each column as a single line. In this exercise, we have pre-loaded three columns of data from a weather data set - temperature, dew point, and pressure - but the problem is that pressure has different units of measure. The pressure data, measured in Atmospheres, has a different vertical scaling than that of the other two data columns, which are both measured in degrees Fahrenheit.</p>
 <p>Your job is to plot all columns as a multi-line plot, to see the nature of vertical scaling problem. Then, use a list of column names passed into the DataFrame <code>df[column_list]</code> to limit plotting to just one column, and then just 2 columns of data. When you are finished, you will have created 4 plots. You can cycle through them by clicking on the 'Previous Plot' and 'Next Plot' buttons.</p>
 <p>As in the previous exercise, inspect the DataFrame df in the IPython Shell using the <code>.head()</code> and <code>.info()</code> methods.</p>
 
@@ -13398,7 +13398,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="CHAPTER-2:-Exploratory-data-analysis">CHAPTER 2: Exploratory data analysis<a class="anchor-link" href="#CHAPTER-2:-Exploratory-data-analysis">&#182;</a></h1><h2 id="pandas-line-plots">pandas line plots<a class="anchor-link" href="#pandas-line-plots">&#182;</a></h2><p>In the previous chapter, you saw that the .plot() method will place the Index values on the x-axis by default. In this exercise, you'll practice making line plots with specific columns on the x and y axes.</p>
+<h2 id="CHAPTER-2:-Exploratory-data-analysis">CHAPTER 2: Exploratory data analysis<a class="anchor-link" href="#CHAPTER-2:-Exploratory-data-analysis">&#182;</a></h2><h3 id="pandas-line-plots">pandas line plots<a class="anchor-link" href="#pandas-line-plots">&#182;</a></h3><p>In the previous chapter, you saw that the .plot() method will place the Index values on the x-axis by default. In this exercise, you'll practice making line plots with specific columns on the x and y axes.</p>
 <p>You will work with a dataset consisting of monthly stock prices in 2015 for AAPL, GOOG, and IBM. The stock prices were obtained from Yahoo Finance. Your job is to plot the 'Month' column on the x-axis and the AAPL and IBM prices on the y-axis using a list of column names.</p>
 <p>All necessary modules have been imported for you, and the DataFrame is available in the workspace as df. Explore it using methods such as <code>.head(), .info(), and .describe()</code> to see the column names.</p>
 
@@ -13417,7 +13417,7 @@ div#notebook {
 <span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Month&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y_columns</span><span class="p">)</span>
 
 <span class="c1"># Add the title</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Monthly stock prices&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Monthly stock prices&#39;</span><span class="p">)</span>
 
 <span class="c1"># Add the y-axis label</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Price ($US)&#39;</span><span class="p">)</span>
@@ -13434,7 +13434,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="pandas-scatter-plots">pandas scatter plots<a class="anchor-link" href="#pandas-scatter-plots">&#182;</a></h2><p>Pandas scatter plots are generated using the <code>kind='scatter'</code> keyword argument. Scatter plots require that the x and y columns be chosen by specifying the x and y parameters inside <code>.plot()</code>. Scatter plots also take an s keyword argument to provide the radius of each circle to plot in pixels.</p>
+<h3 id="pandas-scatter-plots">pandas scatter plots<a class="anchor-link" href="#pandas-scatter-plots">&#182;</a></h3><p>Pandas scatter plots are generated using the <code>kind='scatter'</code> keyword argument. Scatter plots require that the x and y columns be chosen by specifying the x and y parameters inside <code>.plot()</code>. Scatter plots also take an s keyword argument to provide the radius of each circle to plot in pixels.</p>
 <p>In this exercise, you're going to plot fuel efficiency (miles-per-gallon) versus horse-power for 392 automobiles manufactured from 1970 to 1982 from the UCI Machine Learning Repository.</p>
 <p>The size of each circle is provided as a NumPy array called sizes. This array contains the normalized <code>'weight'</code> of each automobile in the dataset.</p>
 <p>All necessary modules have been imported and the DataFrame is available in the workspace as df</p>
@@ -13471,7 +13471,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="pandas-box-plots">pandas box plots<a class="anchor-link" href="#pandas-box-plots">&#182;</a></h2><p>While pandas can plot multiple columns of data in a single figure, making plots that share the same x and y axes, there are cases where two columns cannot be plotted together because their units do not match. The .plot() method can generate subplots for each column being plotted. Here, each plot will be scaled independently.</p>
+<h3 id="pandas-box-plots">pandas box plots<a class="anchor-link" href="#pandas-box-plots">&#182;</a></h3><p>While pandas can plot multiple columns of data in a single figure, making plots that share the same x and y axes, there are cases where two columns cannot be plotted together because their units do not match. The .plot() method can generate subplots for each column being plotted. Here, each plot will be scaled independently.</p>
 <p>In this exercise your job is to generate box plots for fuel efficiency (mpg) and weight from the automobiles data set. To do this in a single figure, you'll specify subplots=True inside <code>.plot()</code> to generate two separate plots.</p>
 <p>All necessary modules have been imported and the automobiles dataset is available in the workspace as df.</p>
 
@@ -13501,7 +13501,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="pandas-hist,-pdf-and-cdf">pandas hist, pdf and cdf<a class="anchor-link" href="#pandas-hist,-pdf-and-cdf">&#182;</a></h2><p>Pandas relies on the .hist() method to not only generate histograms, but also plots of <code>probability density functions (PDFs) and cumulative density functions (CDFs)</code>.</p>
+<h3 id="pandas-hist,-pdf-and-cdf">pandas hist, pdf and cdf<a class="anchor-link" href="#pandas-hist,-pdf-and-cdf">&#182;</a></h3><p>Pandas relies on the .hist() method to not only generate histograms, but also plots of <code>probability density functions (PDFs) and cumulative density functions (CDFs)</code>.</p>
 <p>In this exercise, you will work with a dataset consisting of restaurant bills that includes the amount customers tipped.</p>
 <p>The original dataset is provided by the Seaborn package.</p>
 <p>Your job is to plot a PDF and CDF for the fraction column of the tips dataset. This column contains information about what fraction of the total bill is comprised of the tip.</p>
@@ -13536,7 +13536,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Box-Plot">Box Plot<a class="anchor-link" href="#Box-Plot">&#182;</a></h2><p>The picture below shows the box plot structure:</p>
+<h3 id="Box-Plot">Box Plot<a class="anchor-link" href="#Box-Plot">&#182;</a></h3><p>The picture below shows the box plot structure:</p>
 <p><img src="BoxPlot.png" alt="Box Plot"></p>
 
 </div>
@@ -13545,7 +13545,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Bachelor's-degrees-awarded-to-women">Bachelor's degrees awarded to women<a class="anchor-link" href="#Bachelor's-degrees-awarded-to-women">&#182;</a></h2><p>In this exercise, you will investigate statistics of the percentage of Bachelor's degrees awarded to women from 1970 to 2011. Data is recorded every year for 17 different fields. This data set was obtained from the Digest of Education Statistics.</p>
+<h3 id="Bachelor's-degrees-awarded-to-women">Bachelor's degrees awarded to women<a class="anchor-link" href="#Bachelor's-degrees-awarded-to-women">&#182;</a></h3><p>In this exercise, you will investigate statistics of the percentage of Bachelor's degrees awarded to women from 1970 to 2011. Data is recorded every year for 17 different fields. This data set was obtained from the Digest of Education Statistics.</p>
 <p>Your job is to compute the minimum and maximum values of the <code>'Engineering'</code> column and generate a line plot of the mean value of all 17 academic fields per year. To perform this step, you'll use the <code>.mean()</code> method with the keyword argument <code>axis='columns'</code>. This computes the mean across all columns per row.</p>
 <p>The DataFrame has been pre-loaded for you as df with the index set to <code>'Year'</code>.</p>
 
@@ -13581,7 +13581,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Median-vs-mean">Median vs mean<a class="anchor-link" href="#Median-vs-mean">&#182;</a></h2><p>In many data sets, there can be large differences in the mean and median value due to the presence of outliers.</p>
+<h3 id="Median-vs-mean">Median vs mean<a class="anchor-link" href="#Median-vs-mean">&#182;</a></h3><p>In many data sets, there can be large differences in the mean and median value due to the presence of outliers.</p>
 <p>In this exercise, you'll investigate the mean, median, and max fare prices paid by passengers on the Titanic and generate a box plot of the fare prices. This data set was obtained from Vanderbilt University.</p>
 <p>All necessary modules have been imported and the DataFrame is available in the workspace as df.</p>
 
@@ -13611,7 +13611,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Quantiles">Quantiles<a class="anchor-link" href="#Quantiles">&#182;</a></h2><p>In this exercise, you'll investigate the probabilities of life expectancy in countries around the world. This dataset contains life expectancy for persons born each year from 1800 to 2015. Since country names change or results are not reported, not every country has values. This dataset was obtained from Gapminder.</p>
+<h3 id="Quantiles">Quantiles<a class="anchor-link" href="#Quantiles">&#182;</a></h3><p>In this exercise, you'll investigate the probabilities of life expectancy in countries around the world. This dataset contains life expectancy for persons born each year from 1800 to 2015. Since country names change or results are not reported, not every country has values. This dataset was obtained from Gapminder.</p>
 <p>First, you will determine the number of countries reported in 2015. There are a total of 260 unique countries in the entire dataset. Then, you will compute the 5th and 95th percentiles of life expectancy over the entire dataset. Finally, you will make a box plot of life expectancy every 50 years from 1800 to 2000. Notice the large change in the distributions over this period.</p>
 <p>The dataset has been pre-loaded into a DataFrame called df</p>
 
@@ -13644,7 +13644,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Standard-deviation-of-temperature">Standard deviation of temperature<a class="anchor-link" href="#Standard-deviation-of-temperature">&#182;</a></h2><p>Let's use the mean and standard deviation to explore differences in temperature distributions in Pittsburgh in 2013. The data has been obtained from Weather Underground.</p>
+<h3 id="Standard-deviation-of-temperature">Standard deviation of temperature<a class="anchor-link" href="#Standard-deviation-of-temperature">&#182;</a></h3><p>Let's use the mean and standard deviation to explore differences in temperature distributions in Pittsburgh in 2013. The data has been obtained from Weather Underground.</p>
 <p>In this exercise, you're going to compare the distribution of daily temperatures in January and March. You'll compute the mean and standard deviation for these two months. You will notice that while the mean values are similar, the standard deviations are quite different, meaning that one month had a larger fluctuation in temperature than the other.</p>
 <p>The DataFrames have been pre-loaded for you as january, which contains the January data, and march, which contains the March data.</p>
 
@@ -13671,7 +13671,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Separate-and-summarize">Separate and summarize<a class="anchor-link" href="#Separate-and-summarize">&#182;</a></h2><p>Let's use population filtering to determine how the automobiles in the US differ from the global average and standard deviation. How does the distribution of fuel efficiency (MPG) for the US differ from the global average and standard deviation?</p>
+<h3 id="Separate-and-summarize">Separate and summarize<a class="anchor-link" href="#Separate-and-summarize">&#182;</a></h3><p>Let's use population filtering to determine how the automobiles in the US differ from the global average and standard deviation. How does the distribution of fuel efficiency (MPG) for the US differ from the global average and standard deviation?</p>
 <p>In this exercise, you'll compute the means and standard deviations of all columns in the full automobile dataset. Next, you'll compute the same quantities for just the US population and subtract the global values from the US values.</p>
 <p>All necessary modules have been imported and the DataFrame has been pre-loaded as df.</p>
 
@@ -13707,7 +13707,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Separate-and-plot">Separate and plot<a class="anchor-link" href="#Separate-and-plot">&#182;</a></h2><p>Population filtering can be used alongside plotting to quickly determine differences in distributions between the sub-populations. You'll work with the Titanic dataset.</p>
+<h3 id="Separate-and-plot">Separate and plot<a class="anchor-link" href="#Separate-and-plot">&#182;</a></h3><p>Population filtering can be used alongside plotting to quickly determine differences in distributions between the sub-populations. You'll work with the Titanic dataset.</p>
 <p>There were three passenger classes on the Titanic, and passengers in each class paid a different fare price. In this exercise, you'll investigate the differences in these fare prices.</p>
 <p>Your job is to use Boolean filtering and generate box plots of the fare prices for each of the three passenger classes. The fare prices are contained in the 'fare' column and passenger class information is contained in the 'pclass' column.</p>
 <p>When you're done, notice the portions of the box plots that differ and those that are similar.</p>
@@ -13745,7 +13745,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="CHAPTER-3:-TIME-SERIES-IN-PANDAS">CHAPTER 3: TIME SERIES IN PANDAS<a class="anchor-link" href="#CHAPTER-3:-TIME-SERIES-IN-PANDAS">&#182;</a></h1><h2 id="Reading-and-slicing-times">Reading and slicing times<a class="anchor-link" href="#Reading-and-slicing-times">&#182;</a></h2><p>For this exercise, we have read in the same data file using three different approaches:</p>
+<h2 id="CHAPTER-3:-Time-Series-with-Pandas">CHAPTER 3: Time Series with Pandas<a class="anchor-link" href="#CHAPTER-3:-Time-Series-with-Pandas">&#182;</a></h2><h3 id="Reading-and-slicing-times">Reading and slicing times<a class="anchor-link" href="#Reading-and-slicing-times">&#182;</a></h3><p>For this exercise, we have read in the same data file using three different approaches:</p>
 <p>df1 = pd.read_csv(filename)</p>
 <p>df2 = pd.read_csv(filename, parse_dates=['Date'])</p>
 <p>df3 = pd.read_csv(filename, index_col='Date', parse_dates=True)</p>
@@ -13758,7 +13758,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Creating-and-using-a-DatetimeIndex">Creating and using a DatetimeIndex<a class="anchor-link" href="#Creating-and-using-a-DatetimeIndex">&#182;</a></h2><p>The pandas Index is a powerful way to handle time series data, so it is valuable to know how to build one yourself. Pandas provides the <code>pd.to_datetime()</code> function for just this task. For example, if passed the list of strings <code>['2015-01-01 091234','2015-01-01 091234']</code> and a format specification variable, such as <code>format='%Y-%m-%d %H%M%S</code>, pandas will parse the string into the proper datetime elements and build the datetime objects.</p>
+<h3 id="Creating-and-using-a-DatetimeIndex">Creating and using a DatetimeIndex<a class="anchor-link" href="#Creating-and-using-a-DatetimeIndex">&#182;</a></h3><p>The pandas Index is a powerful way to handle time series data, so it is valuable to know how to build one yourself. Pandas provides the <code>pd.to_datetime()</code> function for just this task. For example, if passed the list of strings <code>['2015-01-01 091234','2015-01-01 091234']</code> and a format specification variable, such as <code>format='%Y-%m-%d %H%M%S</code>, pandas will parse the string into the proper datetime elements and build the datetime objects.</p>
 <p>In this exercise, a list of temperature data and a list of date strings has been pre-loaded for you as <code>temperature_list</code> and date_list respectively. Your job is to use the <code>.to_datetime()</code> method to build a DatetimeIndex out of the list of date strings, and to then use it along with the list of temperature data to build a pandas <code>Series</code>.</p>
 
 </div>
@@ -13787,7 +13787,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Partial-string-indexing-and-slicing">Partial string indexing and slicing<a class="anchor-link" href="#Partial-string-indexing-and-slicing">&#182;</a></h2><p>Pandas time series support "partial string" indexing. What this means is that even when passed only a portion of the datetime, such as the date but not the time, pandas is remarkably good at doing what one would expect. Pandas datetime indexing also supports a wide variety of commonly used datetime string formats, even when mixed.</p>
+<h3 id="Partial-string-indexing-and-slicing">Partial string indexing and slicing<a class="anchor-link" href="#Partial-string-indexing-and-slicing">&#182;</a></h3><p>Pandas time series support "partial string" indexing. What this means is that even when passed only a portion of the datetime, such as the date but not the time, pandas is remarkably good at doing what one would expect. Pandas datetime indexing also supports a wide variety of commonly used datetime string formats, even when mixed.</p>
 <p>In this exercise, a time series that contains hourly weather data has been pre-loaded for you. This data was read using the parse_dates=True option in read_csv() with index_col="Dates" so that the Index is indeed a DatetimeIndex.</p>
 <p>All data from the 'Temperature' column has been extracted into the variable ts0. Your job is to use a variety of natural date strings to extract one or more values from ts0.</p>
 <p>After you are done, you will have three new variables - ts1, ts2, and ts3. You can slice these further to extract only the first and last entries of each. Try doing this after your submission for more practice.</p>
@@ -13818,7 +13818,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Resampling-and-frequency">Resampling and frequency<a class="anchor-link" href="#Resampling-and-frequency">&#182;</a></h2><p>Pandas provides methods for resampling time series data. When downsampling or upsampling, the syntax is similar, but the methods called are different. Both use the concept of <code>'method chaining' - df.method1().method2().method3()</code> - to direct the output from one method call to the input of the next, and so on, as a sequence of operations, one feeding into the next.</p>
+<h3 id="Resampling-and-frequency">Resampling and frequency<a class="anchor-link" href="#Resampling-and-frequency">&#182;</a></h3><p>Pandas provides methods for resampling time series data. When downsampling or upsampling, the syntax is similar, but the methods called are different. Both use the concept of <code>'method chaining' - df.method1().method2().method3()</code> - to direct the output from one method call to the input of the next, and so on, as a sequence of operations, one feeding into the next.</p>
 <p>For example, if you have hourly data, and just need daily data, pandas will not guess how to throw out the 23 of 24 points. You must specify this in the method. One approach, for instance, could be to take the mean, as in <code>df.resample('D').mean()</code>.</p>
 <p>In this exercise, a data set containing hourly temperature data has been pre-loaded for you. Your job is to resample the data using a variety of aggregation methods to answer a few questions.</p>
 
@@ -13847,7 +13847,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Separating-and-resampling">Separating and resampling<a class="anchor-link" href="#Separating-and-resampling">&#182;</a></h2><p>With pandas, you can resample in different ways on different subsets of your data. For example, resampling different months of data with different aggregations. In this exercise, the data set containing hourly temperature data from the last exercise has been pre-loaded.</p>
+<h3 id="Separating-and-resampling">Separating and resampling<a class="anchor-link" href="#Separating-and-resampling">&#182;</a></h3><p>With pandas, you can resample in different ways on different subsets of your data. For example, resampling different months of data with different aggregations. In this exercise, the data set containing hourly temperature data from the last exercise has been pre-loaded.</p>
 <p>Your job is to resample the data using a variety of aggregation methods. The DataFrame is available in the workspace as df. You will be working with the <code>'Temperature'</code> column.</p>
 
 </div>
@@ -13879,7 +13879,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Rolling-mean-and-frequency">Rolling mean and frequency<a class="anchor-link" href="#Rolling-mean-and-frequency">&#182;</a></h2><p>In this exercise, some hourly weather data is pre-loaded for you. You will continue to practice resampling, this time using rolling means.</p>
+<h3 id="Rolling-mean-and-frequency">Rolling mean and frequency<a class="anchor-link" href="#Rolling-mean-and-frequency">&#182;</a></h3><p>In this exercise, some hourly weather data is pre-loaded for you. You will continue to practice resampling, this time using rolling means.</p>
 <p>Rolling means (or moving averages) are generally used to smooth out short-term fluctuations in time series data and highlight long-term trends. You can read more about them here.</p>
 <p>To use the <code>.rolling()</code> method, you must always use method chaining, first calling <code>.rolling()</code> and then chaining an aggregation method after it. For example, with a Series hourly_data, <code>hourly_data.rolling(window=24).mean()</code> would compute new values for each hourly point, based on a 24-hour window stretching out behind each point. The frequency of the output data is the same: it is still hourly. Such an operation is useful for smoothing time series data.</p>
 <p>Your job is to resample the data using the combination of <code>.rolling()</code> and <code>.mean()</code>. You will work with the same DataFrame df from the previous exercise.</p>
@@ -13914,7 +13914,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Resample-and-roll-with-it">Resample and roll with it<a class="anchor-link" href="#Resample-and-roll-with-it">&#182;</a></h2><p>As of pandas version 0.18.0, the interface for applying rolling transformations to time series has become more consistent and flexible, and feels somewhat like a groupby (If you do not know what a groupby is, don't worry, you will learn about it in the next course!).</p>
+<h3 id="Resample-and-roll-with-it">Resample and roll with it<a class="anchor-link" href="#Resample-and-roll-with-it">&#182;</a></h3><p>As of pandas version 0.18.0, the interface for applying rolling transformations to time series has become more consistent and flexible, and feels somewhat like a groupby (If you do not know what a groupby is, don't worry, you will learn about it in the next course!).</p>
 <p>You can now flexibly chain together resampling and rolling operations. In this exercise, the same weather data from the previous exercises has been pre-loaded for you. Your job is to extract one month of data, resample to find the daily high temperatures, and then use a rolling and aggregation operation to smooth the data.</p>
 
 </div>
@@ -13945,7 +13945,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Method-chaining-and-filtering">Method chaining and filtering<a class="anchor-link" href="#Method-chaining-and-filtering">&#182;</a></h2><p>We've seen that pandas supports method chaining. This technique can be very powerful when cleaning and filtering data.</p>
+<h3 id="Method-chaining-and-filtering">Method chaining and filtering<a class="anchor-link" href="#Method-chaining-and-filtering">&#182;</a></h3><p>We've seen that pandas supports method chaining. This technique can be very powerful when cleaning and filtering data.</p>
 <p>In this exercise, a DataFrame containing flight departure data for a single airline and a single airport for the month of July 2015 has been pre-loaded. Your job is to use <code>.str()</code> filtering and method chaining to generate summary statistics on flight delays each day to Dallas.</p>
 
 </div>
@@ -13978,7 +13978,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Missing-values-and-interpolation">Missing values and interpolation<a class="anchor-link" href="#Missing-values-and-interpolation">&#182;</a></h2><p>One common application of interpolation in data analysis is to fill in missing data.</p>
+<h3 id="Missing-values-and-interpolation">Missing values and interpolation<a class="anchor-link" href="#Missing-values-and-interpolation">&#182;</a></h3><p>One common application of interpolation in data analysis is to fill in missing data.</p>
 <p>In this exercise, noisy measured data that has some dropped or otherwise missing values has been loaded. The goal is to compare two time series, and then look at summary statistics of the differences. The problem is that one of the data sets is missing data at some of the times. The pre-loaded data ts1 has value for all times, yet the data set ts2 does not: it is missing data for the weekends.</p>
 <p>Your job is to first interpolate to fill in the data for all days. Then, compute the differences between the two data sets, now that they both have full support for all times. Finally, generate the summary statistics that describe the distribution of differences.</p>
 
@@ -14008,7 +14008,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Missing-values-and-interpolation">Missing values and interpolation<a class="anchor-link" href="#Missing-values-and-interpolation">&#182;</a></h2><p>One common application of interpolation in data analysis is to fill in missing data.</p>
+<h3 id="Missing-values-and-interpolation">Missing values and interpolation<a class="anchor-link" href="#Missing-values-and-interpolation">&#182;</a></h3><p>One common application of interpolation in data analysis is to fill in missing data.</p>
 <p>In this exercise, noisy measured data that has some dropped or otherwise missing values has been loaded. The goal is to compare two time series, and then look at summary statistics of the differences. The problem is that one of the data sets is missing data at some of the times. The pre-loaded data ts1 has value for all times, yet the data set ts2 does not: it is missing data for the weekends.</p>
 <p>Your job is to first interpolate to fill in the data for all days. Then, compute the differences between the two data sets, now that they both have full support for all times. Finally, generate the summary statistics that describe the distribution of differences.</p>
 
@@ -14038,7 +14038,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Time-zones-and-conversion">Time zones and conversion<a class="anchor-link" href="#Time-zones-and-conversion">&#182;</a></h2><p>Time zone handling with pandas typically assumes that you are handling the Index of the Series. In this exercise, you will learn how to handle timezones that are associated with datetimes in the column data, and not just the Index.</p>
+<h3 id="Time-zones-and-conversion">Time zones and conversion<a class="anchor-link" href="#Time-zones-and-conversion">&#182;</a></h3><p>Time zone handling with pandas typically assumes that you are handling the Index of the Series. In this exercise, you will learn how to handle timezones that are associated with datetimes in the column data, and not just the Index.</p>
 <p>You will work with the flight departure dataset again, and this time you will select Los Angeles ('LAX') as the destination airport.</p>
 <p>Here we will use a mask to ensure that we only compute on data we actually want. To learn more about Boolean masks, click here!</p>
 
@@ -14074,7 +14074,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Plotting-time-series,-datetime-indexing">Plotting time series, datetime indexing<a class="anchor-link" href="#Plotting-time-series,-datetime-indexing">&#182;</a></h2><p>Pandas handles datetimes not only in your data, but also in your plotting.</p>
+<h3 id="Plotting-time-series,-datetime-indexing">Plotting time series, datetime indexing<a class="anchor-link" href="#Plotting-time-series,-datetime-indexing">&#182;</a></h3><p>Pandas handles datetimes not only in your data, but also in your plotting.</p>
 <p>In this exercise, some time series data has been pre-loaded. However, we have not parsed the date-like columns nor set the index, as we have done for you in the past!</p>
 <p>The plot displayed is how pandas renders data with the default integer/positional index. Your job is to convert the 'Date' column from a collection of strings into a collection of datetime objects. Then, you will use this converted 'Date' column as your new index, and re-plot the data, noting the improved datetime awareness. After you are done, you can cycle between the two plots you generated by clicking on the 'Previous Plot' and 'Next Plot' buttons.</p>
 <p>Before proceeding, look at the plot shown and observe how pandas handles data with the default integer index. Then, inspect the DataFrame df using the <code>.head()</code> method in the IPython Shell to get a feel for its structure.</p>
@@ -14114,7 +14114,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Plotting-date-ranges,-partial-indexing">Plotting date ranges, partial indexing<a class="anchor-link" href="#Plotting-date-ranges,-partial-indexing">&#182;</a></h2><p>Now that you have set the DatetimeIndex in your DataFrame, you have a much more powerful and flexible set of tools to use when plotting your time series data. Of these, one of the most convenient is partial string indexing and slicing. In this exercise, we've pre-loaded a full year of Austin 2010 weather data, with the index set to be the datetime parsed 'Date' column as shown in the previous exercise.</p>
+<h3 id="Plotting-date-ranges,-partial-indexing">Plotting date ranges, partial indexing<a class="anchor-link" href="#Plotting-date-ranges,-partial-indexing">&#182;</a></h3><p>Now that you have set the DatetimeIndex in your DataFrame, you have a much more powerful and flexible set of tools to use when plotting your time series data. Of these, one of the most convenient is partial string indexing and slicing. In this exercise, we've pre-loaded a full year of Austin 2010 weather data, with the index set to be the datetime parsed 'Date' column as shown in the previous exercise.</p>
 <p>Your job is to use partial string indexing of the dates, in a variety of datetime string formats, to plot all the summer data and just one week of data together. After you are done, you can cycle between the two plots by clicking on the 'Previous Plot' and 'Next Plot' buttons.</p>
 <p>First, remind yourself how to extract one month of temperature data using 'May 2010' as a key into <code>df.Temperature[]</code>, and call head() to inspect the result: <code>df.Temperature['May 2010'].head()</code>.</p>
 
@@ -14145,7 +14145,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Chapter-4:-CASE-STUDY">Chapter 4: CASE STUDY<a class="anchor-link" href="#Chapter-4:-CASE-STUDY">&#182;</a></h1><h2 id="Reading-in-a-data-file">Reading in a data file<a class="anchor-link" href="#Reading-in-a-data-file">&#182;</a></h2><p>Now that you have identified the method to use to read the data, let's try to read one file. The problem with real data such as this is that the files are almost never formatted in a convenient way. In this exercise, there are several problems to overcome in reading the file. First, there is no header, and thus the columns don't have labels. There is also no obvious index column, since none of the data columns contain a full date or time.</p>
+<h2 id="Chapter-4:-Case-Study">Chapter 4: Case Study<a class="anchor-link" href="#Chapter-4:-Case-Study">&#182;</a></h2><h3 id="Reading-in-a-data-file">Reading in a data file<a class="anchor-link" href="#Reading-in-a-data-file">&#182;</a></h3><p>Now that you have identified the method to use to read the data, let's try to read one file. The problem with real data such as this is that the files are almost never formatted in a convenient way. In this exercise, there are several problems to overcome in reading the file. First, there is no header, and thus the columns don't have labels. There is also no obvious index column, since none of the data columns contain a full date or time.</p>
 <p>Your job is to read the file into a DataFrame using the default arguments. After inspecting it, you will re-read the file specifying that there are no headers supplied.</p>
 <p>The CSV file has been provided for you as the variable <code>data_file</code></p>
 
@@ -14157,7 +14157,408 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import pandas</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># Read in the data file: df</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">data_file</span><span class="p">)</span>
+
+<span class="c1"># Print the output of df.head()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+
+<span class="c1"># Read in the data file with header=None: df_headers</span>
+<span class="n">df_headers</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">data_file</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+<span class="c1"># Print the output of df_headers.head()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_headers</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Re-assigning-column-names">Re-assigning column names<a class="anchor-link" href="#Re-assigning-column-names">&#182;</a></h3><p>After the initial step of reading in the data, the next step is to clean and tidy it so that it is easier to work with.</p>
+<p>In this exercise, you will begin this cleaning process by re-assigning column names and dropping unnecessary columns.</p>
+<p>pandas has been imported in the workspace as pd, and the file <code>NOAA_QCLCD_2011_hourly_13904.txt</code> has been parsed and loaded into a DataFrame df. The comma separated string of column names, column_labels, and list of columns to drop, list_to_drop, have also been loaded for you.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Split on the comma to create a list: column_labels_list</span>
+<span class="n">column_labels_list</span> <span class="o">=</span> <span class="n">column_labels</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+
+<span class="c1"># Assign the new column labels to the DataFrame: df.columns</span>
+<span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">column_labels_list</span>
+
+<span class="c1"># Remove the appropriate columns: df_dropped</span>
+<span class="n">df_dropped</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">list_to_drop</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s1">&#39;columns&#39;</span><span class="p">)</span>
+
+<span class="c1"># Print the output of df_dropped.head()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_dropped</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Cleaning-and-tidying-datetime-data">Cleaning and tidying datetime data<a class="anchor-link" href="#Cleaning-and-tidying-datetime-data">&#182;</a></h3><p>In order to use the full power of pandas time series, you must construct a DatetimeIndex. To do so, it is necessary to clean and transform the date and time columns.</p>
+<p>The DataFrame df_dropped you created in the last exercise is provided for you and pandas has been imported as pd.</p>
+<p>Your job is to clean up the date and Time columns and combine them into a datetime collection to be used as the Index.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Convert the date column to string: df_dropped[&#39;date&#39;]</span>
+<span class="n">df_dropped</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_dropped</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_dropped</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">])</span>
+
+<span class="c1"># Pad leading zeros to the Time column: df_dropped[&#39;Time&#39;]</span>
+<span class="c1"># Example: from 35 becomes 0035, 130 becomes 0130 and 5635 remains same</span>
+<span class="n">df_dropped</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_dropped</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="s1">&#39;</span><span class="si">{:0&gt;4}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+
+<span class="c1"># Concatenate the new date and Time columns: date_string</span>
+<span class="n">date_string</span> <span class="o">=</span> <span class="n">df_dropped</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">df_dropped</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">date_string</span><span class="p">)</span>
+
+<span class="c1"># Convert the date_string Series to datetime: date_times</span>
+<span class="n">date_times</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">date_string</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;%Y%m</span><span class="si">%d</span><span class="s1">%H%M&#39;</span><span class="p">)</span>
+
+<span class="c1"># Set the index to be the new date_times container: df_clean</span>
+<span class="n">df_clean</span> <span class="o">=</span> <span class="n">df_dropped</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="n">date_times</span><span class="p">)</span>
+
+<span class="c1"># Print the output of df_clean.head()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_clean</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Cleaning-the-numeric-columns">Cleaning the numeric columns<a class="anchor-link" href="#Cleaning-the-numeric-columns">&#182;</a></h3><p>The numeric columns contain missing values labeled as <code>'M'</code>. In this exercise, your job is to transform these columns such that they contain only numeric values and interpret missing data as <code>NaN</code>.</p>
+<p>The pandas function <code>pd.to_numeric()</code> is ideal for this purpose: It converts a Series of values to floating-point values. Furthermore, by specifying the keyword argument errors='coerce', you can force strings like <code>'M'</code> to be interpreted as <code>NaN</code>.</p>
+<p>A DataFrame <code>df_clean</code> is provided for you at the start of the exercise, and as usual, pandas has been imported as pd.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Print the dry_bulb_faren temperature between 8 AM and 9 AM on June 20, 2011</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_clean</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_clean</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2011-Jun-20 08:00:00&#39;</span><span class="p">:</span><span class="s1">&#39;2011-Jun-20, 09:00:00&#39;</span><span class="p">])</span>
+
+<span class="c1"># Convert the dry_bulb_faren column to numeric values: df_clean[&#39;dry_bulb_faren&#39;]</span>
+<span class="n">df_clean</span><span class="p">[</span><span class="s1">&#39;dry_bulb_faren&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df_clean</span><span class="p">[</span><span class="s1">&#39;dry_bulb_faren&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+
+<span class="c1"># Print the transformed dry_bulb_faren temperature between 8 AM and 9 AM on June 20, 2011</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_clean</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2011-Jun-20 08:00:00&#39;</span><span class="p">:</span><span class="s1">&#39;2011-Jun-20, 09:00:00&#39;</span><span class="p">])</span>
+
+<span class="c1"># Convert the wind_speed and dew_point_faren columns to numeric values</span>
+<span class="n">df_clean</span><span class="p">[</span><span class="s1">&#39;wind_speed&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df_clean</span><span class="p">[</span><span class="s1">&#39;wind_speed&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+<span class="n">df_clean</span><span class="p">[</span><span class="s1">&#39;dew_point_faren&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df_clean</span><span class="p">[</span><span class="s1">&#39;dew_point_faren&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Signal-min,-max,-median">Signal min, max, median<a class="anchor-link" href="#Signal-min,-max,-median">&#182;</a></h3><p>Now that you have the data read and cleaned, you can begin with statistical EDA. First, you will analyze the 2011 Austin weather data.</p>
+<p>Your job in this exercise is to analyze the 'dry_bulb_faren' column and print the median temperatures for specific time ranges. You can do this using partial datetime string selection.</p>
+<p>The cleaned dataframe is provided in the workspace as df_clean.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Print the median of the dry_bulb_faren column</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_clean</span><span class="p">[</span><span class="s1">&#39;dry_bulb_faren&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">())</span>
+
+<span class="c1"># Print the median of the dry_bulb_faren column for the time range &#39;2011-Apr&#39;:&#39;2011-Jun&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_clean</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2011-04&#39;</span><span class="p">:</span><span class="s1">&#39;2011-06&#39;</span><span class="p">,</span> <span class="s1">&#39;dry_bulb_faren&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">())</span>
+
+<span class="c1"># Print the median of the dry_bulb_faren column for the month of January</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_clean</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2011-01&#39;</span><span class="p">,</span> <span class="s1">&#39;dry_bulb_faren&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Signal-variance">Signal variance<a class="anchor-link" href="#Signal-variance">&#182;</a></h3><p>You're now ready to compare the 2011 weather data with the 30-year normals reported in 2010. You can ask questions such as, on average, how much hotter was every day in 2011 than expected from the 30-year average?</p>
+<p>The DataFrames df_clean and df_climate from previous exercises are available in the workspace.</p>
+<p>Your job is to first resample df_clean and df_climate by day and aggregate the mean temperatures. You will then extract the temperature related columns from each - <code>'dry_bulb_faren'</code> in df_clean, and 'Temperature' in df_climate - as NumPy arrays and compute the difference.</p>
+<p>Notice that the indexes of <code>df_clean</code> and <code>df_climate</code> are not aligned - <code>df_clean</code> has dates in <code>2011</code>, while <code>df_climate</code> has dates in <code>2010</code>. This is why you extract the temperature columns as NumPy arrays. An alternative approach is to use the pandas <code>.reset_index()</code> method to make sure the Series align properly. You will practice this approach as well.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Downsample df_clean by day and aggregate by mean: daily_mean_2011</span>
+<span class="n">daily_mean_2011</span> <span class="o">=</span> <span class="n">df_clean</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="c1"># Extract the dry_bulb_faren column from daily_mean_2011 using .values: daily_temp_2011</span>
+<span class="n">daily_temp_2011</span> <span class="o">=</span> <span class="p">(</span><span class="n">daily_mean_2011</span><span class="p">[</span><span class="s1">&#39;dry_bulb_faren&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">values</span>
+
+<span class="c1"># Downsample df_climate by day and aggregate by mean: daily_climate</span>
+<span class="n">daily_climate</span> <span class="o">=</span> <span class="n">df_climate</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="c1"># Extract the Temperature column from daily_climate using .reset_index(): daily_temp_climate</span>
+<span class="n">daily_temp_climate</span> <span class="o">=</span> <span class="p">(</span><span class="n">daily_climate</span><span class="o">.</span><span class="n">reset_index</span><span class="p">())[</span><span class="s1">&#39;Temperature&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+
+<span class="c1"># Compute the difference between the two arrays and print the mean difference</span>
+<span class="n">difference</span> <span class="o">=</span> <span class="n">daily_temp_2011</span> <span class="o">-</span> <span class="n">daily_temp_climate</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">difference</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Sunny-or-cloudy">Sunny or cloudy<a class="anchor-link" href="#Sunny-or-cloudy">&#182;</a></h3><p>On average, how much hotter is it when the sun is shining? In this exercise, you will compare temperatures on sunny days against temperatures on overcast days.</p>
+<p>Your job is to use Boolean selection to filter out sunny and overcast days, and then compute the difference of the mean daily maximum temperatures between each type of day.</p>
+<p>The DataFrame <code>df_clean</code> from previous exercises has been provided for you. The column <code>'sky_condition'</code> provides information about whether the day was <code>sunny ('CLR'</code>) or <code>overcast ('OVC')</code>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Using df_clean, when is sky_condition &#39;CLR&#39;?</span>
+<span class="n">is_sky_clear</span> <span class="o">=</span> <span class="n">df_clean</span><span class="p">[</span><span class="s1">&#39;sky_condition&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;CLR&#39;</span>
+
+<span class="c1"># Filter df_clean using is_sky_clear</span>
+<span class="n">sunny</span> <span class="o">=</span> <span class="n">df_clean</span><span class="p">[</span><span class="n">is_sky_clear</span><span class="p">]</span>
+
+<span class="c1"># Resample sunny by day then calculate the max</span>
+<span class="n">sunny_daily_max</span> <span class="o">=</span> <span class="n">sunny</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+
+<span class="c1"># See the result</span>
+<span class="n">sunny_daily_max</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
+<span class="c1"># Using df_clean, when does sky_condition contain &#39;OVC&#39;?</span>
+<span class="n">is_sky_overcast</span> <span class="o">=</span> <span class="n">df_clean</span><span class="p">[</span><span class="s1">&#39;sky_condition&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;OVC&#39;</span><span class="p">)</span>
+
+<span class="c1"># Filter df_clean using is_sky_overcast</span>
+<span class="n">overcast</span> <span class="o">=</span> <span class="n">df_clean</span><span class="p">[</span><span class="n">is_sky_overcast</span><span class="p">]</span>
+
+<span class="c1"># Resample overcast by day then calculate the max</span>
+<span class="n">overcast_daily_max</span> <span class="o">=</span> <span class="n">overcast</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+
+<span class="c1"># See the result</span>
+<span class="n">overcast_daily_max</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
+<span class="c1"># Calculate the mean of sunny_daily_max</span>
+<span class="n">sunny_daily_max_mean</span> <span class="o">=</span> <span class="n">sunny_daily_max</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="c1"># Calculate the mean of overcast_daily_max</span>
+<span class="n">overcast_daily_max_mean</span> <span class="o">=</span> <span class="n">overcast_daily_max</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="c1"># Print the difference (sunny minus overcast)</span>
+<span class="n">difference</span> <span class="o">=</span> <span class="n">sunny_daily_max_mean</span><span class="o">-</span><span class="n">overcast_daily_max_mean</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">difference</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Weekly-average-temperature-and-visibility">Weekly average temperature and visibility<a class="anchor-link" href="#Weekly-average-temperature-and-visibility">&#182;</a></h3><p>Is there a correlation between temperature and visibility? Let's find out.</p>
+<p>In this exercise, your job is to plot the weekly average temperature and visibility as subplots. To do this, you need to first select the appropriate columns and then resample by week, aggregating the mean.</p>
+<p>In addition to creating the subplots, you will compute the Pearson correlation coefficient using <code>.corr()</code>. The <strong>Pearson correlation coefficient</strong>, known also as <em>Pearson's r</em>, ranges from <em>-1 (indicating total negative linear correlation) to 1 (indicating total positive linear correlation). A value close to 1 here would indicate that there is a strong correlation between temperature and visibility</em>.</p>
+<p>The DataFrame <code>df_clean</code> has been pre-loaded for you</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import matplotlib.pyplot as plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Select the visibility and dry_bulb_faren columns and resample them: weekly_mean</span>
+<span class="n">weekly_mean</span> <span class="o">=</span> <span class="n">df_clean</span><span class="p">[[</span><span class="s1">&#39;visibility&#39;</span><span class="p">,</span> <span class="s1">&#39;dry_bulb_faren&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">&#39;W&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="c1"># Print the output of weekly_mean.corr()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">weekly_mean</span><span class="o">.</span><span class="n">corr</span><span class="p">())</span>
+
+<span class="c1"># Plot weekly_mean with subplots=True</span>
+<span class="n">weekly_mean</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">subplots</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Daily-hours-of-clear-sky">Daily hours of clear sky<a class="anchor-link" href="#Daily-hours-of-clear-sky">&#182;</a></h3><p>In a previous exercise, you analyzed the <code>'sky_condition'</code> column to explore the difference in temperature on sunny days compared to overcast days. Recall that a <code>'sky_condition'</code> of <code>'CLR'</code> represents a sunny day. In this exercise, you will explore sunny days in greater detail. Specifically, you will use a box plot to visualize the fraction of days that are sunny.</p>
+<p>The <code>'sky_condition'</code> column is recorded hourly. Your job is to resample this column appropriately such that you can extract the number of sunny hours in a day and the number of total hours. Then, you can divide the number of sunny hours by the number of total hours, and generate a box plot of the resulting fraction.</p>
+<p>As before, <code>df_clean</code> is available for you in the workspace.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Using df_clean, when is sky_condition &#39;CLR&#39;?</span>
+<span class="n">is_sky_clear</span> <span class="o">=</span> <span class="n">df_clean</span><span class="p">[</span><span class="s1">&#39;sky_condition&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;CLR&#39;</span>
+
+<span class="c1"># Resample is_sky_clear by day</span>
+<span class="n">resampled</span> <span class="o">=</span> <span class="n">is_sky_clear</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">)</span>
+
+<span class="c1"># See the result</span>
+<span class="n">resampled</span>
+
+<span class="c1"># Calculate the number of sunny hours per day</span>
+<span class="n">sunny_hours</span> <span class="o">=</span> <span class="n">resampled</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="c1"># Calculate the number of measured hours per day</span>
+<span class="n">total_hours</span> <span class="o">=</span> <span class="n">resampled</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+
+<span class="c1"># Calculate the fraction of hours per day that were sunny</span>
+<span class="n">sunny_fraction</span> <span class="o">=</span> <span class="n">sunny_hours</span><span class="o">/</span><span class="n">total_hours</span>
+
+<span class="c1"># Make a box plot of sunny_fraction</span>
+<span class="n">sunny_fraction</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;box&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Heat-or-humidity">Heat or humidity<a class="anchor-link" href="#Heat-or-humidity">&#182;</a></h3><p>Dew point is a measure of relative humidity based on pressure and temperature. A dew point above 65 is considered uncomfortable while a temperature above 90 is also considered uncomfortable.</p>
+<p>In this exercise, you will explore the maximum temperature and dew point of each month. The columns of interest are <code>'dew_point_faren' and 'dry_bulb_faren'</code>. After resampling them appropriately to get the maximum temperature and dew point in each month, generate a histogram of these values as subplots. Uncomfortably, you will notice that the maximum dew point is above 65 every month!</p>
+<p><code>df_clean</code> has been pre-loaded for you.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Resample dew_point_faren and dry_bulb_faren by Month, aggregating the maximum values: monthly_max</span>
+<span class="n">monthly_max</span> <span class="o">=</span> <span class="n">df_clean</span><span class="p">[[</span><span class="s1">&#39;dew_point_faren&#39;</span><span class="p">,</span> <span class="s1">&#39;dry_bulb_faren&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">&#39;M&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+
+<span class="c1"># Generate a histogram with bins=8, alpha=0.5, subplots=True</span>
+<span class="n">monthly_max</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;hist&#39;</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">subplots</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Show the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Probability-of-high-temperatures">Probability of high temperatures<a class="anchor-link" href="#Probability-of-high-temperatures">&#182;</a></h3><p>We already know that 2011 was hotter than the climate normals for the previous thirty years. In this final exercise, you will compare the maximum temperature in August 2011 against that of the August 2010 climate normals. More specifically, you will use a CDF plot to determine the probability of the 2011 daily maximum temperature in August being above the 2010 climate normal value. To do this, you will leverage the data manipulation, filtering, resampling, and visualization skills you have acquired throughout this course.</p>
+<p>The two DataFrames df_clean and df_climate are available in the workspace. Your job is to select the maximum temperature in August in <code>df_climate</code>, and then maximum daily temperatures in August 2011. You will then filter out the days in August 2011 that were above the August 2010 maximum, and use this to construct a CDF plot.</p>
+<p>Once you've generated the CDF, notice how it shows that there was a 50% probability of the 2011 daily maximum temperature in August being 5 degrees above the 2010 climate normal value!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Probability-of-high-temperatures">Probability of high temperatures<a class="anchor-link" href="#Probability-of-high-temperatures">&#182;</a></h3><p>We already know that 2011 was hotter than the climate normals for the previous thirty years. In this final exercise, you will compare the maximum temperature in <code>August 2011</code> against that of the <code>August 2010</code> climate normals. More specifically, you will use a CDF plot to determine the probability of the 2011 daily maximum temperature in August being above the 2010 climate normal value. To do this, you will leverage the data manipulation, filtering, resampling, and visualization skills you have acquired throughout this course.</p>
+<p>The two DataFrames <code>df_clean and df_climate</code> are available in the workspace. Your job is to select the maximum temperature in August in df_climate, and then maximum daily temperatures in August 2011. You will then filter out the days in August 2011 that were above the August 2010 maximum, and use this to construct a CDF plot.</p>
+<p>Once you've generated the CDF, notice how it shows that there was a 50% probability of the 2011 daily maximum temperature in August being 5 degrees above the 2010 climate normal value!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Extract the maximum temperature in August 2010 from df_climate: august_max</span>
+<span class="n">august_max</span> <span class="o">=</span> <span class="n">df_climate</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2010-08&#39;</span><span class="p">,</span> <span class="s1">&#39;Temperature&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">august_max</span><span class="p">)</span>
+
+<span class="c1"># Resample August 2011 temps in df_clean by day &amp; aggregate the max value: august_2011</span>
+<span class="n">august_2011</span> <span class="o">=</span> <span class="n">df_clean</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2011-08&#39;</span><span class="p">,</span> <span class="s1">&#39;dry_bulb_faren&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+
+<span class="c1"># Filter for days in august_2011 where the value exceeds august_max: august_2011_high</span>
+<span class="n">august_2011_high</span> <span class="o">=</span> <span class="n">august_2011</span><span class="p">[</span><span class="n">august_2011</span><span class="o">&gt;</span><span class="n">august_max</span><span class="p">]</span>
+
+<span class="c1"># Construct a CDF of august_2011_high</span>
+<span class="n">august_2011_high</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;hist&#39;</span><span class="p">,</span> <span class="n">normed</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cumulative</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Display the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
     </div>
